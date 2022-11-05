@@ -33,7 +33,10 @@ def get_shop_list_by_dishes(list_of_dishes: list, person_count: int):
                         # print(ingredient['ingredient_name'], 'уже в словаре')
                         shoping_list[ingredient['ingredient_name']]['quantity'] += ingredient['quantity']*person_count
                     else:
-                        shoping_list.update({ingredient['ingredient_name']: {ingredient['ingredient_name']: ingredient['measure'], 'quantity': ingredient['quantity']*person_count}})
+                        shoping_list.update({ingredient['ingredient_name']: {
+                            'measure': ingredient['measure'],
+                            'quantity': ingredient['quantity']*person_count
+                        }})
     print(shoping_list)
 
 
